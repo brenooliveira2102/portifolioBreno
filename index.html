@@ -55,38 +55,17 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #00b8d4;
         }
-
-
-        /* --- Aurora Background Effect --- */
-        @keyframes aurora {
-            from {
-                background-position: 50% 50%, 50% 50%;
-            }
-            to {
-                background-position: 350% 50%, 350% 50%;
-            }
+        
+        /* This prevents horizontal scrollbars */
+        html {
+            overflow-x: hidden;
         }
-
-        .aurora-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background-image: 
-                conic-gradient(from 90deg at 40% 20%, var(--dark-bg), var(--primary-color)),
-                conic-gradient(from 270deg at 60% 80%, var(--primary-color), var(--dark-bg));
-            filter: blur(100px);
-            animation: aurora 60s linear infinite;
-            background-size: 200%;
-        }
-
 
         body {
             background-color: var(--dark-bg);
             color: var(--text-color);
             font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden; /* Prevents horizontal scroll */
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -143,7 +122,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: transparent; /* Let the aurora show through */
+            background-color: transparent; 
         }
         
         #hero h1 {
@@ -333,8 +312,6 @@
     </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70">
-    
-    <div class="aurora-background"></div>
 
     <!-- Navbar -->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -435,8 +412,8 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card portfolio-card h-100">
                          <div class="card-img-container">
-                           <img src="tutty.avif" class="card-img-top" alt="Preview do site Tutty Aluguel de Brinquedos" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0b0c10/00dffc?text=Tutty+Brinquedos';">
-                        </div>
+                            <img src="tutty.avif" class="card-img-top" alt="Preview do site Tutty Aluguel de Brinquedos" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0b0c10/00dffc?text=Tutty+Brinquedos';">
+                         </div>
                         <div class="card-body d-flex flex-column text-center">
                             <h5 class="card-title">Tutty Aluguel de Brinquedos</h5>
                             <p class="card-text flex-grow-1">Catálogo online para empresa de locação de brinquedos.</p>
@@ -448,8 +425,8 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card portfolio-card h-100">
                          <div class="card-img-container">
-                           <img src="arteninja.avif" class="card-img-top" alt="Preview do site Arte Ninja Barbearia" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0b0c10/00dffc?text=Arte+Ninja';">
-                        </div>
+                            <img src="arteninja.avif" class="card-img-top" alt="Preview do site Arte Ninja Barbearia" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0b0c10/00dffc?text=Arte+Ninja';">
+                         </div>
                         <div class="card-body d-flex flex-column text-center">
                             <h5 class="card-title">Arte Ninja Barbearia</h5>
                             <p class="card-text flex-grow-1">Website moderno para barbearia com agendamento.</p>
@@ -461,8 +438,8 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card portfolio-card h-100">
                          <div class="card-img-container">
-                           <img src="minasdiesel.avif" class="card-img-top" alt="Preview do site Mecânica Minas Diesel" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0b0c10/00dffc?text=Minas+Diesel';">
-                        </div>
+                            <img src="minasdiesel.avif" class="card-img-top" alt="Preview do site Mecânica Minas Diesel" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0b0c10/00dffc?text=Minas+Diesel';">
+                         </div>
                         <div class="card-body d-flex flex-column text-center">
                             <h5 class="card-title">Mecânica Minas Diesel</h5>
                             <p class="card-text flex-grow-1">Site para oficina mecânica especializada em diesel.</p>
@@ -474,8 +451,8 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card portfolio-card h-100">
                          <div class="card-img-container">
-                           <img src="spacefitness.avif" class="card-img-top" alt="Preview do site Space Fitness" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0b0c10/00dffc?text=Space+Fitness';">
-                        </div>
+                            <img src="spacefitness.avif" class="card-img-top" alt="Preview do site Space Fitness" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0b0c10/00dffc?text=Space+Fitness';">
+                         </div>
                         <div class="card-body d-flex flex-column text-center">
                             <h5 class="card-title">Space Fitness</h5>
                             <p class="card-text flex-grow-1">Landing page para academia com foco em matrículas.</p>
@@ -487,8 +464,8 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card portfolio-card h-100">
                          <div class="card-img-container">
-                           <img src="sosmaquinas.avif" class="card-img-top" alt="Preview do site SOS Máquinas de Lavar Roupa" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0b0c10/00dffc?text=SOS+M%C3%A1quinas';">
-                        </div>
+                            <img src="sosmaquinas.avif" class="card-img-top" alt="Preview do site SOS Máquinas de Lavar Roupa" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0b0c10/00dffc?text=SOS+M%C3%A1quinas';">
+                         </div>
                         <div class="card-body d-flex flex-column text-center">
                             <h5 class="card-title">SOS Máquinas de Lavar</h5>
                             <p class="card-text flex-grow-1">Site para empresa de assistência técnica.</p>
@@ -500,8 +477,8 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card portfolio-card h-100">
                          <div class="card-img-container">
-                           <img src="scmecanica.avif" class="card-img-top" alt="Preview do site SC Mecânica" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0b0c10/00dffc?text=SC+Mec%C3%A2nica';">
-                        </div>
+                            <img src="scmecanica.avif" class="card-img-top" alt="Preview do site SC Mecânica" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0b0c10/00dffc?text=SC+Mec%C3%A2nica';">
+                         </div>
                         <div class="card-body d-flex flex-column text-center">
                             <h5 class="card-title">SC Mecânica</h5>
                             <p class="card-text flex-grow-1">Site para oficina mecânica e auto peças.</p>
